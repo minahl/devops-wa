@@ -13,8 +13,9 @@ Twilio is needed, so I signed up and looked up a few more articles, namely:<br>
 
 # 3 Can I do this?
 Her code is quite similar to the Twilio "How To" articles<br>
-So I figure instead of using her code I can try following the article<br><br>
+So I figure instead of using her code I can try following the article<br>
 
+Create my folders<br>
 ![](folder.jpg)<br>
 
 I get stuck at the Python part<br>
@@ -28,6 +29,11 @@ Setup environment variables<br>
 Run python whatsapp.py<br>
 Nothing happens<br>
 ![](powershell2.jpg)<br>
+
+Try it out on GitHub anyway<br>
+Commit change<br>
+Running stops at "whatsapp-notify" and no message is received<br>
+![](actions.jpg)<br>
 
 # 4 Failure
 After 4 hours of abject failure<br>
