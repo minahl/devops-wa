@@ -16,7 +16,5 @@ jobs:
           auth_token: ${{ secrets.auth_token }}
           contact_no: ${{ secrets.contact_no }}
 
-        uses: ishween/whatsapp-push-notify-action@master
-
       - name : Run
         run: echo 'Message sent!'
