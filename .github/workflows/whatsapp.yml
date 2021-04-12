@@ -14,6 +14,5 @@ jobs:
           account_sid: ${{ secrets.account_sid }}
           auth_token: ${{ secrets.auth_token }}
           contact_no: ${{ secrets.contact_no }}
-
-      - name : Run
+      - name : run
         run: echo 'Message sent!'
