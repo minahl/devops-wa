@@ -1,0 +1,22 @@
+# triggers workflow on push or pull request events for master branch
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@master
+      - name: whatsapp-notify
+        id: whatsapp-notify
+        env:
+          account_sid: ${{ secrets.account_sid }}
+          auth_token: ${{ secrets.auth_token }}
+          contact_no: ${{ secrets.contact_no }}
+
+        uses: ishween/whatsapp-push-notify-action@master
+
+      - name : Run
+        run: echo 'Message sent!'
