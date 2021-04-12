@@ -10,9 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: whatsapp
+        run: echo 'Start!'
         env:
           account_sid: ${{ secrets.account_sid }}
           auth_token: ${{ secrets.auth_token }}
           contact_no: ${{ secrets.contact_no }}
-      - name : run
-        run: echo 'Message sent!'
