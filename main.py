@@ -1,12 +1,15 @@
 import os
 from twilio.rest import Client
 
-client = Client(os.environ['account_sid'], os.environ['auth_token'])
+account_sid = os.environ['account_sid']
+auth_token = os.environ['auth_token']
 
-# +14155238886 is the Twilio sandbox testing number
+client = Client(account_sid, auth_token)
 
-client.messages.create(body='Github Updated!',
-                       from_='whatsapp:+14155238886',
-                       to='whatsapp:'+os.environ['contact_no'])
+message = client.messages.create(
+                              body='Yay! Push event triggered in master branch',
+                              from_='whatsapp:+14155238886',
+                              to='whatsapp:'+os.environ['to_whatsapp_no']
+                          )
 
-print(message.sid)
+print("Message ID:",message.sid)
