@@ -5,8 +5,15 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: whatsapp-notify
-        run: echo 'Start!'
+        id: whatsapp-notify
         env:
           account_sid: ${{ secrets.account_sid }}
           auth_token: ${{ secrets.auth_token }}
-          contact_no: ${{ secrets.contact_no }}
+          to_whatsapp_no: ${{ secrets.to_whatsapp_no }}
+
+
+        uses: ishween/whatsapp-push-notify-action@master
+      
+      - name : Run
+        run: |
+          echo 'Start!'
