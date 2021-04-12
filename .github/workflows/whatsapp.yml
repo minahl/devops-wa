@@ -9,8 +9,7 @@ jobs:
     
     steps:
       - uses: actions/checkout@master
-      - name: whatsapp-notify
-        id: whatsapp-notify
+      - name: whatsapp
         env:
           account_sid: ${{ secrets.account_sid }}
           auth_token: ${{ secrets.auth_token }}
